@@ -65,7 +65,7 @@ public class Job {
 
 
 
-        return "Id:" + id +
+        return "ID:" + id +
                 "\nName: " + nameStr +
                 "\nEmployer: " + employerStr +
                 "\nLocation: " + locationStr +

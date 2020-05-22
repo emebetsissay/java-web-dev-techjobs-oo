@@ -41,6 +41,7 @@ public class JobField {
 
     }
 
+
     @Override
     public String toString() {
         return "JobField{" +
@@ -49,13 +50,16 @@ public class JobField {
     }
 
     @Override
-    public boolean equals(Object obj) {
-        return super.equals(obj);
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        JobField jobField = (JobField) o;
+        return getId() == jobField.getId();
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getId(), getValue());
+        return Objects.hash(getId());
     }
 }
 

@@ -94,7 +94,7 @@ class JobTest {
 
     @org.junit.jupiter.api.Test
     void testJobsFortoString(){
-        String result ="Id:2\n"+
+        String result ="ID:2 \n"+
                 "Name: Web Developer\n" +
                 "Employer: LaunchCode\n" +
                 "Location: St. Louis\n" +
