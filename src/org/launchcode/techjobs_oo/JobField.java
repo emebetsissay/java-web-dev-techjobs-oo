@@ -55,10 +55,8 @@ public class JobField {
 
     @Override
     public int hashCode() {
-        return super.hashCode();
+        return Objects.hash(getId(), getValue());
     }
-
-
 }
 
 

@@ -5,7 +5,7 @@ import java.util.Objects;
 public class Job {
 
     private int id;
-    private static int nextId = 1;
+    private static int nextId = 9;
 
     private String name;
     private Employer employer;
@@ -15,7 +15,7 @@ public class Job {
 
     public Job(){
         id = nextId;
-        nextId++;
+        nextId= nextId + 1;
     }
 
     public Job(String name, Employer employer, Location location, PositionType positionType, CoreCompetency coreCompetency) {
@@ -65,12 +65,12 @@ public class Job {
 
 
 
-        return " \n Id: " + id +
-                "\n Name: " + nameStr +
-                "\n Employer: " + employerStr +
-                "\n Location: " + locationStr +
-                "\n PositionType: " + positionTypeStr +
-                "\n CoreCompetency: " + coreCompetencyStr ;
+        return "Id:" + id +
+                "\nName: " + nameStr +
+                "\nEmployer: " + employerStr +
+                "\nLocation: " + locationStr +
+                "\nPositionType: " + positionTypeStr +
+                "\nCoreCompetency: " + coreCompetencyStr ;
     }
 
     @Override

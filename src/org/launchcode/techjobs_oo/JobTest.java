@@ -94,12 +94,12 @@ class JobTest {
 
     @org.junit.jupiter.api.Test
     void testJobsFortoString(){
-        String result = " id:2\n" +
-                " name: Web Developer\n" +
-                " employer: LaunchCode\n" +
-                " location: St. Louis\n" +
-                " positionType: Front-end developer\n" +
-                " coreCompetency: JavaScript";
+        String result ="Id:2\n"+
+                "Name: Web Developer\n" +
+                "Employer: LaunchCode\n" +
+                "Location: St. Louis\n" +
+                "PositionType: Front-end developer\n" +
+                "CoreCompetency: JavaScript";
         assertEquals(result, job2.toString());
 
 
