@@ -19,11 +19,58 @@ public class Job {
     }
 
     public Job(String name, Employer employer, Location location, PositionType positionType, CoreCompetency coreCompetency) {
+        this();
         this.name = name;
         this.employer = employer;
         this.location = location;
         this.positionType = positionType;
         this.coreCompetency = coreCompetency;
+
+    }
+
+    @Override
+    public String toString() {
+        String nameStr= "Data not available";
+        String employerStr = "Data not available";
+        String locationStr= "Data not available";
+        String positionTypeStr= "Data not available";
+        String coreCompetencyStr= "Data not available";
+        if(name == null){
+            nameStr ="Data not available";
+        } else {
+            nameStr = name;
+        }
+        if(employer.getValue() == null){
+            employerStr ="Data not available";
+        } else {
+            employerStr = employer.getValue();
+        }
+        if(location.getValue() == null){
+            locationStr ="Data not available";
+        } else {
+            locationStr = location.getValue();
+        }
+        if(positionType.getValue() == null){
+            positionTypeStr ="Data not available";
+        } else {
+            positionTypeStr = positionType.getValue();
+        }
+        if(coreCompetency.getValue() == null){
+            coreCompetencyStr ="Data not available";
+        } else {
+            coreCompetencyStr = coreCompetency.getValue();
+        }
+
+
+
+
+
+        return " \n Id: " + id +
+                "\n Name: " + nameStr +
+                "\n Employer: " + employerStr +
+                "\n Location: " + locationStr +
+                "\n PositionType: " + positionTypeStr +
+                "\n CoreCompetency: " + coreCompetencyStr ;
     }
 
     @Override
@@ -81,5 +128,10 @@ public class Job {
 
     public void setCoreCompetency(CoreCompetency coreCompetency) {
         this.coreCompetency = coreCompetency;
+    }
+
+    public static void main(String[] args) {
+        Job job1 = new Job("Web Developer", new Employer("LaunchCode"), new Location("St. Louis"), new PositionType("Front-end developer"), new CoreCompetency("JavaScript"));
+        System.out.println(job1.toString());
     }
 }
